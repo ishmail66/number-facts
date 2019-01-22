@@ -8,6 +8,16 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="js/backend.js"></script>
+
+    <style>
+    main > *+* {
+  margin-top: .75rem;
+}
+body{
+    background-color: black
+}
+    </style>
+
 </head>
 
 <body>
@@ -24,7 +34,7 @@
                     <input id="input" type="quote" placeholder="enter a number">
 
               </div>
-              <div class="col-sm bg-primary">
+              <div class="col-sm bg-warning">
                    fun fact: <p id="quote"></p>
                 <button  onclick="useInput()">submit</button>
 
@@ -33,7 +43,7 @@
             </div>
 
             <div class="row">
-                <div class="col-md bg-danger">
+                <div class="col-md bg-warning">
                  <!-- <a id="url" href="">get new quote</a> -->
     
                 </div>
@@ -43,20 +53,11 @@
 
             </div>
           </div>
-          <!-- <span id="number"></span> -->
-<!-- <span id="number-fact"></span>
 
-<script>
-    function showNumber(str) {
-        document.getElementById('number-fact').innerText = str;
-    }
-
-    (function() {
-        var scriptTag = document.createElement('script');
-        scriptTag.async = true;
-        scriptTag.src = "http://numbersapi.com/1999/math?callback=showNumber";
-        document.body.appendChild(scriptTag);
-    })();
-</script>     -->
+          <main>
+            <h2>Random Number</h2>
+            <span id="ranNum"></span>
+            <button onclick="generate()">Generate</button>
+          </main>
 </body>
 </html>

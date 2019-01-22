@@ -37,56 +37,28 @@
                 });
             }
 
-            function useInput(){
+            function useInput(randomNum){
                 
-                var input = document.getElementById('input').value
-                newQuote(input); 
+                // var input = document.getElementById('input').value;
+                newQuote(randomNum); 
 
-                document.getElementById('quote').innerHTML = input;
+                document.getElementById('quote').innerHTML = randomNum;
 
             }
 
-            // $(document).ready(function () {
-            //     newQuote();
-            //     $('button').on('click', newQuote());
-            // });
-        ////////////////////////////////////////task/////////////
-        // api challenge
-        // numbersapi.com/#42
-        // use to fetch data
-        // onclick
-        // display to the user in a friendly way
+  //Get a reference to the button
+  var button = document.getElementById("generate");
 
-        // ajax request 
-        // random number between 0-9999
-        //  create input
-        // validate
-        // button to submit number
-        // user must receive a fun fact about that number
-        // gets bound to the button to perform this repetitive task
-        
-        // outcomes:
-        // know api purpose
-        // understand the usage o the ajax function
-        // know how to create a request
-        // display the result
-        // use a function to perform a repetitive task
+  //Run the function on button click
+  function generate() {
 
-//         $.get('http://numbersapi.com/1337/trivia?notfound=floor&fragment', function(data) {
-//     $('#number').text(data);
-// });
+  // Create a variable to hold a random number between 1 and 100
+  var randomNum = Math.floor((Math.random() * 9999) + 1);
 
-// function showNumber(str) {
-//     document.getElementById('number-fact').innerText = str;
-// }
+  // Create a variable el to hold the ranNum element
+  var el = document.getElementById('ranNum');
+  // Write the number into that element
+  el.innerHTML = randomNum;
 
-// (function() {
-//     var scriptTag = document.createElement('script');
-//     scriptTag.async = true;
-//     scriptTag.src = "http://numbersapi.com/42/math?callback=showNumber";
-//     document.body.appendChild(scriptTag);
-// })();
-
-// showNumber(str);
-
-
+  useInput(randomNum);
+ }
